@@ -1,10 +1,10 @@
 var footerTemplate  = `
         <div class="footer-social-media">
             <div class="footer-social-media-icons">
-                <a href="https://www.facebook.com/biomyndir/"><img src="images/icons/facebook.svg"></a>
-                <a href="https://www.instagram.com/sambioin/"><img src="images/icons/instagram.svg"></a>
-                <a href=""><img src="images/icons/twitter.svg"></a>
-                <a href=""><img src="images/icons/snapchat.svg"></a>
+                <a href="https://www.facebook.com/biomyndir/"><img src="images/icons/Facebook.svg"></a>
+                <a href="https://www.instagram.com/sambioin/"><img src="images/icons/Instagram.svg"></a>
+                <a href=""><img src="images/icons/Twitter.svg"></a>
+                <a href=""><img src="images/icons/Snapchat.svg"></a>
             </div>
         </div>
         <div class="footer-container">

@@ -77,7 +77,7 @@ var templates = {
     <section class="movie-info-container">
         <div class="movie-info-wrapper">
             <div class="movie-info-photo">
-                <img src="images/fantasticbeasts.jpg">
+                <img src="images/Fantasticbeasts.jpg">
                 <button class="trailer-btn" onclick="openTrailer()">Sýnishorn</button>
             </div>
             <div class="movie-info-description">
