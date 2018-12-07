@@ -1,4 +1,4 @@
-var headerContent = `
+var headerTemplate = `
         <div class="header-container">
             <a href="index.html"><img src="images/logo/sambio-mainlogo.png"></a>
             <ul class="list-container">
@@ -57,10 +57,10 @@ var headerContent = `
                     <div class="white-menu">
                         <ul>
                             <span class="burger-bluelines"></span>
-                            <a href="#"><li><h1>Kvikmyndir</h1></li></a>
-                            <a href="#"><li><h1 id="comingsoon">Væntanlegt</h1></li></a>
-                            <a href="#"><li><h1>Um okkur</h1></li></a>
-                            <a href="#"><li><h1>Fríðindi</h1></li></a>
+                            <a href="#"><li class="list-item"><h1 id="frontpage">Kvikmyndir</h1></li></a>
+                            <a href="#"><li class="list-item"><h1 id="comingsoon">Væntanlegt</h1></li></a>
+                            <a href="#"><li class="list-item"><h1 id="aboutus">Um okkur</h1></li></a>
+                            <a href="#"><li class="list-item"><h1>Fríðindi</h1></li></a>
                             <span class="burger-bluelines"></span>
                         </ul>
                     </div>
@@ -68,4 +68,3 @@ var headerContent = `
             </ul>
         </div>
     `;
-    document.querySelector("header").innerHTML = headerContent;

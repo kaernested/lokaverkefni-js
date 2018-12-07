@@ -882,6 +882,34 @@ body{
 .comingsoon-filter h2{
     font-weight: bold;
 }
+.trailer{
+    z-index: 50;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+.trailer-container{
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    z-index: 51;
+    margin: 0 auto;
+
+}
+.close-trailer .fa-times{
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+.close-trailer{
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    margin-bottom: 10px;
+
+}
 /***** About us ***************************************************/
 .about-container{
     width: 90%;
@@ -1109,7 +1137,193 @@ footer p{
 }
 
 /************* MOBILE *******************/
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 812px){
+   /*Header*/
+    header{
+
+    }
+
+    .blue-menu{
+        width: 40%;
+    }
+    .white-menu{
+        width: 60%;
+    }
+    .blue-menu h2{
+        font-size: 16px;
+    }
+    .blue-list-wrapper{
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 10px;
+    }
+    .blue-list1{
+        justify-content: space-evenly;
+    }
+    .blue-img-container {
+        width: 100%;
+    }
+    .blue-img-container img{
+        width: 100%;;
+    }
+    .burger-whitelines{
+        margin-bottom: 0px;
+        background-color: #0E82C5;
+    }
+    .blue-menu li{
+        margin-bottom: 30px;
+    }
+    .white-menu ul{
+        padding-left: 30px;
+    }
+    .burger-info{
+        flex-direction: column;
+    }
+    .burger-mail , .burger-phone{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .burger-mail img, .burger-phone img{
+        width: 24px;
+        margin-right: 10px;
+    }
+    .burger-mail p , .burger-phone p {
+        font-size: 14px;
+    }
+    /*frontpage*/
+    .offer-container{
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    .offer-popcorn{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+
+    }
+    .offer-popcorn img{
+        width: 100%;
+        border-radius: 0;
+
+    }
+    .offer-groups{
+        height: 100%;
+        width: 100%;
+    }
+    .offer-groupbookings{
+        flex-direction: column;
+        width: 100%;
+        height:100%;
+        border-radius: 0;
+
+    }
+    .offer-bdaybookings{
+        flex-direction: column;
+        width: 100%;
+        height:100%;
+        border-radius: 0;
+    }
+    .offer-groupbookings img{
+        width: 100%;
+        border-radius: 0;
+
+    }
+    .offer-bdaybookings img{
+        width: 100%;
+        border-radius: 0;
+
+    }
+    .offer-text{
+        margin: 20px 0 20px 0;
+    }
+    .news-container{
+        height: 100%;
+        width: 100%;
+    }
+    .news1 , .news3{
+        flex-direction: column;
+    }
+    .news2{
+        flex-direction: column-reverse;
+    }
+    .news1 img, .news2 img, .news3 img{
+        width: 100%;
+    }
+    .cards{
+        width: 236px;
+        height: 515px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        box-shadow: 0px 5px 5px rgb(187, 187, 187);
+        transition: 0.4s all;
+        cursor: pointer; 
+        margin: 20px 0 20px 0;
+    }
+    .cards #inspect-btn{
+        opacity: 1;
+    }
+
+    /*movieinfo*/
+    .progress-bar-container{
+        width: 100%;
+    }
+    .progress-bar-wrapper{
+        width: 64%;
+    }
+    .movie-info-wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 80%;
+    }
+    .movie-info-description{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .age-restriction{
+        width: 64px;
+    }
+    .movie-times-container{
+        width: 90%;
+        height: 100%;
+    }
+    .times-top-wrapper{
+        flex-direction: column;
+    }
+    .times-header{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .times-days{
+        width: 100%;
+    }
+    .movie-times-container .times-row1, .movie-times-container .times-row2, .movie-times-container .times-row3, .movie-times-container .times-row4{
+        flex-direction: column;
+        padding: 5px;
+    }
+    .movie-times-container p {
+        margin: 5px 0 5px 0;
+    }
+    .movie-ticket-container{
+        height: 100%;
+        width: 100%;
+    }
+    .movie-ticket-wrapper{
+        width: 90%;
+        height: 100%;
+    }
+    .movie-ticket-wrapper li{
+        padding: 10px 0 10px 0;
+    }
     /*aboutus*/
     .about-container{
         height: 100%;
@@ -1120,7 +1334,7 @@ footer p{
     .about-hero-img{
         display: flex;
         flex-direction: column;
-        height: 550px;
+        height: 400px;
     }
     .about-hero-img img{
         width: 100%;
@@ -1157,7 +1371,7 @@ footer p{
     /*footer*/
     .footer-social-media-icons{
         display: flex;
-        width: 50%;
+        width: 72%;
     }
     .footer-container{
         height: 100%;
@@ -1166,14 +1380,36 @@ footer p{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
     }
     .footer-contact-wrapper{
         display: flex;
         flex-direction: column;
+        margin-bottom: 20px;
+
+    }
+    .footer-contact{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        text-align: center;
+    }
+    .footer-contact h2,.footer-other h2{
+        margin-bottom: 20px;
+
     }
     .footer-phone{
        display: flex;
+       justify-content: space-evenly;
        padding: 0px; 
+    }
+    .footer-email{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 80px;
     }
     .footer-other-container{
         display: flex;
@@ -1182,34 +1418,24 @@ footer p{
     .footer-other{
         display: flex;
         flex-direction: column;
+        padding: 0px;
+        text-align: center;
+    }
+    
+    .footer-other-links-wrapper{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-other-links{
+        padding: 0px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .footer-other-links2{
+        justify-content: space-evenly;
     }
 }
 
-.trailer{
-    z-index: 50;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-}
-.trailer-container{
-    background-color: #fff;
-    height: 100%;
-    width: 100%;
-    z-index: 51;
-    margin: 0 auto;
 
-}
-.close-trailer .fa-times{
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-
-}
-.close-trailer{
-    display: flex;
-    justify-content: flex-end;
-    width: 40%;
-    margin-bottom: 10px;
-
-}

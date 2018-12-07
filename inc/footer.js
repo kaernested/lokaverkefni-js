@@ -1,4 +1,4 @@
-var footerContent  = `
+var footerTemplate  = `
         <div class="footer-social-media">
             <div class="footer-social-media-icons">
                 <a href="https://www.facebook.com/biomyndir/"><img src="images/icons/facebook.svg"></a>
@@ -40,4 +40,3 @@ var footerContent  = `
         </div>
     </div>
     `;
-document.querySelector("footer").innerHTML = footerContent;

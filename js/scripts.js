@@ -1,29 +1,23 @@
 
 console.log("virkar");//þetta svínvirkar og er tengt
 
-//Þetta er til að tengja templates
+//TEMPLATES
+var header = document.querySelector('header');
+var footer = document.querySelector('footer');
+var main = document.querySelector('main');
 
-// var header = document.querySelector('header');
-// var scripts = document.querySelector('scripts')
-// var footer = document.querySelector('footer');
+header.innerHTML = headerTemplate;
+footer.innerHTML = footerTemplate;
+main.innerHTML = templates.frontPageTemplate;
 
-
-// header.innerHTML = templates.header;
-// main.innerHTML = templates.frontpage;
-// footer.innerHTML = templates.footer;
-
-// var showAbout = function(){
-//     main.innerHTML = templates.about;
-// }
-//
-
+// TEMPLATES klárast
 //Burger byrjar hér
 var burger = document.querySelector(".burger-container");
 var close = document.querySelector(".close");
 var menu = document.querySelector(".menu");
 var burgerLines = document.getElementsByClassName("burgerlines");
-var navIsOpen = false;
 
+var navIsOpen = false;
 console.log(burgerLines)
 
 burger.onclick = function(){/* opnar og lokar burger menu*/
@@ -37,6 +31,17 @@ burger.onclick = function(){/* opnar og lokar burger menu*/
         menu.classList.remove("show-menu");
         navIsOpen = false;
     }
+}
+
+var listItem = document.querySelectorAll('.list-item');
+
+for (let i = 0; i < listItem.length; i++) {
+    listItem[i].addEventListener('click', () => {
+        burger.classList.remove("open")
+        menu.classList.remove("show-menu");
+        navIsOpen = false;
+    })
+    
 }
 
 document.body.onscroll = function(){/*þegar skrollað er með burger menu opinn að þá lokast hann*/ 
@@ -198,9 +203,10 @@ var cards = [/* Þetta er array sem inniheldur object, þau eru flokkuð niður 
 //array endar hér
 
 //functionið renderCards byrjar hér
-var container = document.querySelector(".content-container");
 
-function renderCards(isComingSoon){//function með parameter sem spyr hvort cardið sé isComingSoon?
+
+function renderCards(isComingSoon, id){//function með parameter sem spyr hvort cardið sé isComingSoon?
+    var container = document.querySelector(id);
     container.innerHTML = "";
     var showCard = false;//gef showCard að það sé false
     for(var i = 0; i<cards.length;i++){
@@ -224,21 +230,35 @@ function renderCards(isComingSoon){//function með parameter sem spyr hvort card
                     </div>
                     <div class="inspect-btn-container">
                         <i class="fas fa-angle-down"></i>
-                        <a href="movieinfo.html"><button id="inspect-btn">Skoða nánar<i class="fas fa-angle-right"></i></button></a>
+                        <a href="#"><button id="inspect-btn" onclick=function()>Skoða nánar<i class="fas fa-angle-right"></i></button></a>
                     </div>
                 </div>
             </div>
             
         `:""
     }
-
+    console.log('keyri function renderCards, showCard er:' + showCard);
 }
-renderCards(true);
+renderCards(true, '.content-container');
+
+document.getElementById('frontpage').onclick = () => {
+    main.innerHTML = templates.frontPageTemplate;
+    renderCards(true, '.content-container');
+}
+document.getElementById('inspect-btn').onclick = () => {
+    main.innerHTML = templates.movieInfoTemplate;
+}
 document.getElementById("comingsoon").onclick = function(){//þegar klikkað er á comingsoon síðuna þá verða cardsin sem eru true sýnileg
     console.log("comingsoon")
-    renderCards(false);
+    main.innerHTML = templates.comingSoonTemplate;
+    var container = document.querySelector(".content-container");
+    console.log(container);
+    renderCards(false, '.content-container');
 };
 
+document.getElementById('aboutus').onclick = () => {
+    main.innerHTML = templates.aboutUsTemplate;
+}
 /* Search bar*/ 
 function searchForTitle(event){
     var title;
@@ -296,7 +316,10 @@ function openTrailer(){
     trailer.innerHTML = getTrailerTemplate();
 }
 
-trailerButton.onclick = openTrailer;
+if(trailerButton) {
+    trailerButton.onclick = openTrailer;
+}
+
 
 function getTrailerTemplate(){
     return `

@@ -1,5 +1,5 @@
-var literals = {
-    frontpage :`
+var templates = {
+    frontPageTemplate :`
         <div class="frontpage-filter">
             <h2>Sýningar</h2>
             <i class="fas fa-sliders-h"></i>
@@ -61,7 +61,7 @@ var literals = {
             </div>
         </section>
     `,
-    movieinfo:`
+    movieInfoTemplate:`
     <div class="trailer"></div>
     <section class="progress-bar-container">
         <div class="progress-bar-wrapper">
@@ -190,7 +190,7 @@ var literals = {
         </section>                
     </section>
     `,
-    comingsoon: `
+    comingSoonTemplate: `
     <div class="comingsoon-filter">
         <h2>Væntanlegt</h2>
     <i class="fas fa-sliders-h"></i>
@@ -199,7 +199,7 @@ var literals = {
      <!-- Cards úr javascript koma hér -->
     </section>
     `,
-    aboutus:`
+    aboutUsTemplate:`
     <section class="about-container">
         <div class="about-hero-img">
             <img src="images/hero.jpg">
@@ -240,3 +240,4 @@ var literals = {
     <div class="mapouter"><div class="gmap_canvas"><iframe width="1448" height="450" id="gmap_canvas" src="https://maps.google.com/maps?q=samb%C3%AD%C3%B3%20%C3%A1lfabakka&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net"></a></div><style>.mapouter{text-align:right;height:450px;width:1448px;}.gmap_canvas {overflow:hidden;background:none!important;height:450px;width:1448px;}</style></div>
     `
 }
+
