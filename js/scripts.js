@@ -263,6 +263,7 @@ document.getElementById('aboutus').onclick = () => {
 function searchForTitle(event){
     var title;
     var searchResults = [];
+    var container = document.querySelector(".content-container");
     var searchBar = document.querySelector(".search-field")
     console.log(event)
 
